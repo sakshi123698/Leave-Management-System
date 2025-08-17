@@ -1,0 +1,47 @@
+
+
+
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leave Management System</title>
+    <link rel="stylesheet" href="{% static 'core/style.css' %}">
+</head>
+<body>
+    <h1>Leave Management System</h1>
+
+    <section id="add-employee">
+        <h2>Add Employee</h2>
+        <form id="employee-form">
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="text" id="department" placeholder="Department" required>
+            <input type="date" id="joining_date" placeholder="Joining Date" required>
+            <button type="submit">Add Employee</button>
+        </form>
+        <div id="employee-response"></div>
+    </section>
+
+    <section id="apply-leave">
+        <h2>Apply for Leave</h2>
+        <form id="leave-form">
+            <input type="email" id="leave-email" placeholder="Employee Email" required>
+            <input type="date" id="start_date" required>
+            <input type="date" id="end_date" required>
+            <input type="text" id="reason" placeholder="Reason" required>
+            <button type="submit">Apply Leave</button>
+        </form>
+        <div id="leave-response"></div>
+    </section>
+
+    <section id="employee-list">
+    <h2>Registered Employees</h2>
+    <ul id="employees"></ul>
+</section>
+
+
+    <script src="{% static 'core/script.js' %}"></script>
+</body>
+</html>

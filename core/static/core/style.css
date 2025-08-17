@@ -1,0 +1,98 @@
+/* Global Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f7fa;
+  padding: 40px 20px;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Headings */
+h1, h2 {
+  color: #0d6efd; /* Bootstrap Primary Blue */
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* Section styling */
+section {
+  background: #ffffff;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  padding: 30px;
+  margin-bottom: 40px;
+  border-radius: 12px;
+  transition: box-shadow 0.3s ease;
+}
+section:hover {
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+/* Form fields */
+input[type="text"],
+input[type="email"],
+input[type="date"],
+textarea {
+  width: 100%;
+  padding: 14px 18px;
+  margin: 12px 0 20px 0;
+  border-radius: 8px;
+  border: 1.5px solid #ced4da;
+  font-size: 1rem;
+  transition: border-color 0.25s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+textarea:focus {
+  border-color: #0d6efd;
+  outline: none;
+  box-shadow: 0 0 8px rgba(13, 110, 253, 0.25);
+}
+
+/* Textarea */
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Buttons */
+button {
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #084298;
+}
+
+/* Response messages */
+#employee-response,
+#leave-response {
+  margin-top: 14px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #198754; /* Bootstrap Success Green */
+  min-height: 24px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  body {
+    padding: 20px 10px;
+  }
+
+  section {
+    padding: 20px;
+  }
+}
