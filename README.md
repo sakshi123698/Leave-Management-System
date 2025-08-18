@@ -142,6 +142,16 @@ Analytics/reporting features for HR.
 Integrate with frontend frameworks for a richer web UI.
 
 
+For Screenshots Refer:
+Screenshot 2025-08-18 192954.png
+
+Screenshot 2025-08-18 191743.png
+
+Architectural Digram.drawio.png
+
+UML Diagram_ Employee & LeaveRequest.png
+
+
 
 
 
