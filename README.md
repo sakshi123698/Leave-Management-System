@@ -153,6 +153,68 @@ UML Diagram_ Employee & LeaveRequest.png
 
 
 
+## 📂 Documentation
+
+- ![ER Diagram](ER_digram.png)  
+- [API Contract](api_contracts.md)  
+- ![Class Diagram](class_digram.png)  
+- ![Database Schema (Image)](database_schema.png)  
+- [Database Schema (SQL)](database_schema.sql)  
+- ![Flowchart](flowchart.png)  
+- ![Sequence Diagram](sequence_diagram.png)  
+
+
+
+
+
+
+
+
+
+🔑 Pseudocode for Leave Approval
+
+
+
+
+
+function approveLeave(leave_id, status, remarks):
+    leave = findLeaveById(leave_id)
+
+  if leave.status != "Pending":
+        return "Leave already processed"
+
+  if status == "Approved":
+        employee = findEmployee(leave.employee_id)
+        leaveDays = difference(leave.start_date, leave.end_date)
+
+  if employee.leave_balance >= leaveDays:
+            employee.leave_balance -= leaveDays
+            updateEmployee(employee)
+            leave.status = "Approved"
+        else:
+            return "Insufficient leave balance"
+
+else if status == "Rejected":
+        leave.status = "Rejected"
+
+saveLeave(leave)
+    logTransaction(leave_id, status, remarks)
+
+return "Leave updated successfully"
+
+
+📈 Scalability Approach
+
+Backend: Horizontal scaling with multiple Django workers / containerization.
+
+Database: Move to PostgreSQL/MySQL, use indexes for queries, pagination for lists.
+
+Extensibility: Add custom leave types, multi-level approvals.
+
+Performance: Caching, async notifications, task queues.
+
+
+
 
 
 ## Author
